@@ -45,7 +45,7 @@ def inicializador():
     buscar_button.pack(pady=20)
 
     # Botón para ejecutar código
-    ejecutar_button = rounded_button(root, "Ejecutar Código", ejecutar_codigo)
+    ejecutar_button = rounded_button(root, "Camara en Vivo", ejecutar_codigo)
     ejecutar_button.pack(pady=10)
 
     # Ejecutar el bucle principal de la ventana
