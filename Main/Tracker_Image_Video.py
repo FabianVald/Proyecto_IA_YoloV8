@@ -40,7 +40,7 @@ def video_tracker(path):
             masks = results[0].masks.xy
             #results[0].plot()
             confidences = results[0].boxes.conf
-            track_ids = results[0].boxes.id.int().cpu().tolist()
+            track_ids = results[0].boxes.id.int().tolist()
 
             # Filter detections based on confidence threshold (e.g., 60%)
             indices = [i for i, conf in enumerate(confidences) if conf > 0.3]

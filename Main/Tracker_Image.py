@@ -5,7 +5,6 @@ from ultralytics import YOLO
 from ultralytics.utils.plotting import Annotator, colors
 
 
-
 def tracker_img(frame):
     
     #Dictionary to store tracking history with default empty lists
@@ -24,7 +23,7 @@ def tracker_img(frame):
     if results[0].boxes.id is not None and results[0].masks is not None:
         # Extract masks and tracking IDs
         masks = results[0].masks.xy
-        track_ids = results[0].boxes.id.int().cpu().tolist()
+        track_ids = results[0].boxes.id.int().tolist()
 
         # Annotate each mask with its corresponding tracking ID and color
         for mask, track_id in zip(masks, track_ids):
