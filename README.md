@@ -17,5 +17,6 @@
 
 ## Autores
 Pedro H. Aqueveque - (pedro.aqueveque@pregrado.uoh.cl)
+
 Fabian I. Valderrama - (fabian.valderrama@pregrado.uoh.cl)
 
