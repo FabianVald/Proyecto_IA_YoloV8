@@ -1,5 +1,6 @@
 import cv2
 import Tracker_Image as TI
+import Resizer
 
 def find_available_cameras():
     index = 0
@@ -20,6 +21,7 @@ def Capturer():
         cap = cv2.VideoCapture(available_cameras[0], cv2.CAP_DSHOW)
         while True:
             ret, frame = cap.read()
+            frame = Resizer.resize_image(frame)
             if ret:
                 frame,Q = TI.tracker_img(frame)
                 # Display the annotated frame

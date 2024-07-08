@@ -18,7 +18,7 @@ def tracker_img(frame):
     annotator = Annotator(frame, line_width=1)
 
     # Perform object tracking on the current frame
-    results = model.track(frame, persist=True)
+    results = model.track(frame, persist=True,classes = 0)
 
     # Check if tracking IDs and masks are present in the results
     if results[0].boxes.id is not None and results[0].masks is not None:
@@ -29,10 +29,8 @@ def tracker_img(frame):
         # Annotate each mask with its corresponding tracking ID and color
         for mask, track_id in zip(masks, track_ids):
             annotator.seg_bbox(mask=mask, mask_color=colors(track_id, True), track_label=str(track_id))
-
-    if track_ids:
         Q = str(len(track_ids))
     else:
-        Q = 0
+        Q = "0"
       
     return frame,Q

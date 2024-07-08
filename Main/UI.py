@@ -3,11 +3,12 @@ from tkinter import filedialog
 from tkinter import ttk
 import Camara
 import PIL.Image, PIL.ImageTk
+import Tracker_Image_Video as TIV
 
 def buscar_video():
     video_path = filedialog.askopenfilename(filetypes=[("Video files", "*.mp4;*.avi;*.mkv")])
     if video_path:
-        print(f"Ruta del video seleccionado: {video_path}")
+        TIV.video_tracker(video_path)
 
 def ejecutar_codigo():
     # Aquí iría el código que quieres ejecutar al presionar el segundo botón
