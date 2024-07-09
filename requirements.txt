@@ -1,4 +1,1 @@
-cv2
-tkinter
 ultralytics
-
